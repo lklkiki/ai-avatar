@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI形象管理 - 创建您的数字形象</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+    <nav class="dashboard-nav">
+        <div class="logo">AI形象管理</div>
+        <div class="user-info">
+            <span class="user-avatar">👤</span>
+            <span class="user-name">用户名</span>
+            <a href="index.html" class="logout-btn">退出</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-grid">
+            <div class="dashboard-card" id="visual-upload">
+                <div class="card-icon">🖼️</div>
+                <h3>视觉形象</h3>
+                <div class="card-content">
+                    <div class="upload-area" id="visualUpload">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">📸</span>
+                            <span>上传照片或视频</span>
+                            <span class="upload-hint">支持 JPG、PNG、MP4 格式</span>
+                        </div>
+                        <input type="file" name="visual" accept="image/*,video/*" multiple>
+                    </div>
+                    <div class="upload-preview" id="visualPreview">
+                        <!-- 预览内容将通过 JS 动态添加 -->
+                    </div>
+                    <div class="upload-tips">
+                        <p>建议上传：</p>
+                        <ul>
+                            <li>清晰的正面照片</li>
+                            <li>不同角度的照片</li>
+                            <li>日常生活视频片段</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card" id="voice-upload">
+                <div class="card-icon">🎤</div>
+                <h3>声音采集</h3>
+                <div class="card-content">
+                    <div class="upload-area" id="audioUpload">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">🎵</span>
+                            <span>上传音频文件</span>
+                            <span class="upload-hint">支持 MP3、WAV 格式</span>
+                        </div>
+                        <input type="file" name="audio" accept="audio/*" multiple>
+                    </div>
+                    <div class="upload-preview" id="audioPreview">
+                        <!-- 音频预览将通过 JS 动态添加 -->
+                    </div>
+                    <div class="upload-tips">
+                        <p>建议上传：</p>
+                        <ul>
+                            <li>清晰的语音对话</li>
+                            <li>不同情绪的语音片段</li>
+                            <li>总时长建议超过3分钟</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card" id="data-upload">
+                <div class="card-icon">📄</div>
+                <h3>资料收集</h3>
+                <div class="card-content">
+                    <div class="upload-area" id="dataUpload">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">📋</span>
+                            <span>上传文本资料</span>
+                            <span class="upload-hint">支持 TXT、DOC、PDF 格式</span>
+                        </div>
+                        <input type="file" name="documents" accept=".txt,.doc,.docx,.pdf" multiple>
+                    </div>
+                    <div class="upload-preview" id="dataPreview">
+                        <!-- 文件列表将通过 JS 动态添加 -->
+                    </div>
+                    <div class="upload-tips">
+                        <p>建议上传：</p>
+                        <ul>
+                            <li>聊天记录文本</li>
+                            <li>个人日记或笔记</li>
+                            <li>社交媒体内容</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card" id="progress-status">
+                <div class="card-icon">📊</div>
+                <h3>创建进度</h3>
+                <div class="card-content">
+                    <div class="progress-list">
+                        <div class="progress-item">
+                            <div class="progress-label">视觉形象</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-status">待上传</div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">声音采集</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-status">待上传</div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">资料收集</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-status">待上传</div>
+                        </div>
+                    </div>
+                    <button class="start-creation-btn" disabled>开始创建</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 
